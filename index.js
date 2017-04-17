@@ -1,4 +1,5 @@
 'use strict';
+
 var childCompiler = require('./lib/compiler.js');
 var assert = require('assert');
 var _ = require('lodash');
@@ -17,7 +18,8 @@ function FaviconsWebpackPlugin (options) {
     statsFilename: 'iconstats-[hash].json',
     persistentCache: true,
     inject: true,
-    background: '#fff'
+    background: '#fff',
+    manifest: {},
   }, options);
   this.options.icons = _.extend({
     android: true,
