@@ -2,6 +2,8 @@ Favicons Webpack Plugin
 ========================================
 [![npm version](https://badge.fury.io/js/favicons-webpack-plugin.svg)](http://badge.fury.io/js/favicons-webpack-plugin) [![Dependency Status](https://david-dm.org/jantimon/favicons-webpack-plugin.svg)](https://david-dm.org/jantimon/favicons-webpack-plugin) [![Build status](https://travis-ci.org/jantimon/favicons-webpack-plugin.svg)](https://travis-ci.org/jantimon/favicons-webpack-plugin) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
+THis is a fork from this [repository](https://github.com/jantimon/favicons-webpack-plugin). Add possibility to control manifest file. Also add manifest file path, defaults to icon path folder one level above.
+
 Allows to use the [favicons](https://github.com/haydenbleasel/favicons) generator with webpack
 
 Installation
@@ -65,8 +67,8 @@ plugins: [
     inject: true,
     // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
     background: '#fff',
-    // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-    title: 'Webpack App',
+    // Properties to add to manifest.json except icons.
+    manifest: {},
 
     // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
     icons: {

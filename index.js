@@ -17,7 +17,9 @@ function FaviconsWebpackPlugin (options) {
     statsFilename: 'iconstats-[hash].json',
     persistentCache: true,
     inject: true,
-    background: '#fff'
+    background: '#fff',
+    manifest: options.manifest,
+    manifestPath: options.manifestPath
   }, options);
   this.options.icons = _.extend({
     android: true,
